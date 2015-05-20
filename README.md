@@ -60,7 +60,7 @@ License
 [License]: http://59naga.mit-license.org/
 
 [sauce-image]: http://soysauce.berabou.me/59naga/object-parser.svg
-[sauce]: https://saucelabs.com/u/object-parser
+[sauce]: https://saucelabs.com/u/59798
 [npm-image]:https://img.shields.io/npm/v/object-parser.svg?style=flat-square
 [npm]: https://npmjs.org/package/object-parser
 [travis-image]: http://img.shields.io/travis/59naga/object-parser.svg?style=flat-square
