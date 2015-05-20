@@ -1,0 +1,19 @@
+{
+  "name": "object-parser",
+  "main": "object-parser.min.js",
+  "description": "Multiple parse/stringify libraries",
+  "version": "0.0.0",
+  
+  "homepage": "https://github.com/59naga/object-parser",
+  "authors": [
+    "59naga <i59naga@icloud.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
