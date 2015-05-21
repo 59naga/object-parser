@@ -8,7 +8,8 @@
     "build": "browserify $(jqn package name) -s OP | uglifyjs -cm > $(jqn package name).min.js",
     "update": "git tag v$(jqn bower version) &&  git push --tags",
 
-    "test": "istanbul cover -- minijasminenode2 test/spec.js --verbose"
+    "test": "istanbul cover -- minijasminenode2 test/spec.js --verbose",
+    "posttest": "zuul test/API.spec.coffee --report"
   },
 
   "dependencies": {
