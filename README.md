@@ -54,7 +54,8 @@ OP.parse('yaml','-\n    - foo\n    - {bar: baz}\n    - [beep, boop]\n');
 //       "bar": "baz"
 //     },
 //     [
-//       "beep"
+//       "beep",
+//       "boop"
 //     ]
 //   ]
 // ]
@@ -67,7 +68,8 @@ OP.parse('json','[["foo",{"bar":"baz"},["beep","boop"]]]');
 //       "bar": "baz"
 //     },
 //     [
-//       "beep"
+//       "beep",
+//       "boop"
 //     ]
 //   ]
 // ]
@@ -80,7 +82,8 @@ OP.parse('json5','[["foo",{bar:"baz"},["beep","boop"]]]');
 //       "bar": "baz"
 //     },
 //     [
-//       "beep"
+//       "beep",
+//       "boop"
 //     ]
 //   ]
 // ]
@@ -93,7 +96,8 @@ OP.parse('jsonml','<foo bar="baz"><beep>boop</beep></foo>');
 //       "bar": "baz"
 //     },
 //     [
-//       "beep"
+//       "beep",
+//       "boop"
 //     ]
 //   ]
 // ]
