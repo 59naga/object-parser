@@ -1,11 +1,5 @@
-name: object-parser
-dependencies:
-  coffee-script: ^1.9.2
-  json5: ^0.4.0
-  cson: ^3.0.1
-  yamljs: ^0.2.2
-keywords:
-  - yaml
-  - cson
-  - json5
-  - json
+-
+  - ul
+  - [li, {style: 'color:red'}]
+  - [li, {title: 'Some hover text.', style: 'color:green'}]
+  - [li, [span, {class: code-example-third}]]

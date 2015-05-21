@@ -1,19 +1,19 @@
 {
   "name": "object-parser",
   "main": "object-parser",
-  "description": "Multiple parse/stringify libraries",
-  "version": "0.0.0-beta.0",
+  "description": "Multiple parse/stringify function",
+  "version": "0.0.0",
 
   "scripts": {
     "build": "browserify $(jqn package name) -s OP | uglifyjs -cm > $(jqn package name).min.js",
     "update": "git tag v$(jqn bower version) &&  git push --tags",
 
-    "test": "istanbul cover -- minijasminenode2 test/spec.js --verbose --nostack",
-    "posttest": "zuul test/spec.js --report"
+    "test": "istanbul cover -- minijasminenode2 test/spec.js --verbose"
   },
 
   "dependencies": {
     "json5": "^0.4.0",
+    "json_ml": "0.0.1-alpha.1",
     "yamljs": "^0.2.2"
   },
   "devDependencies": {

@@ -29,28 +29,74 @@ $ bower install object-parser --save
 
 ## `OP.stringify(type,object,replacer,indent)`
 ```js
-var object= {foo:'bar',['baz']};
+var object= [['foo',{bar:'baz'},['beep','boop']]];
 
 OP.stringify('yaml',object);
-// foo: bar\nfizz:\n    - baz
-
-OP.stringify('json5',object);
-// {foo:"bar",fizz:["baz"]}
+// '-\n    - foo\n    - {bar: baz}\n    - [beep, boop]'
 
 OP.stringify('json',object);
-// {"foo":"bar","fizz":["baz"]}
+// '[["foo",{"bar":"baz"},["beep","boop"]]]'
+
+OP.stringify('json5',object);
+// '[["foo",{bar:"baz"},["beep","boop"]]]'
+
+OP.stringify('jsonml',object);
+// '<foo bar="baz"><beep>boop</beep></foo>'
 ```
 
 ## `OP.parse(type,object)`
 ```js
-OP.parse('yaml','foo: bar\nfizz:\n    - baz');
-// {foo: "bar", fizz: ['baz']}
+OP.parse('yaml','-\n    - foo\n    - {bar: baz}\n    - [beep, boop]\n');
+// [
+//   [
+//     "foo",
+//     {
+//       "bar": "baz"
+//     },
+//     [
+//       "beep"
+//     ]
+//   ]
+// ]
 
-OP.parse('json5','{foo:"bar",fizz:["baz"]}');
-// {foo: "bar", fizz: ['baz']}
+OP.parse('json','[["foo",{"bar":"baz"},["beep","boop"]]]');
+// [
+//   [
+//     "foo",
+//     {
+//       "bar": "baz"
+//     },
+//     [
+//       "beep"
+//     ]
+//   ]
+// ]
 
-OP.parse('json',{"foo":"bar","fizz":["baz"]});
-// {foo: "bar", fizz: ['baz']}
+OP.parse('json5','[["foo",{bar:"baz"},["beep","boop"]]]');
+// [
+//   [
+//     "foo",
+//     {
+//       "bar": "baz"
+//     },
+//     [
+//       "beep"
+//     ]
+//   ]
+// ]
+
+OP.parse('jsonml','<foo bar="baz"><beep>boop</beep></foo>');
+// [
+//   [
+//     "foo",
+//     {
+//       "bar": "baz"
+//     },
+//     [
+//       "beep"
+//     ]
+//   ]
+// ]
 ```
 
 License
