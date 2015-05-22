@@ -2,7 +2,7 @@
 
 [![Sauce Test Status][sauce-image]][sauce]
 
-> Multiple parse/stringify libraries
+> Multiple parse/stringify function
 
 ## Installation
 ### Via npm

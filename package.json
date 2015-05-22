@@ -2,24 +2,41 @@
   "name": "object-parser",
   "main": "object-parser",
   "description": "Multiple parse/stringify function",
-  "version": "0.0.1-alpha.0",
+  "version": "0.0.1-alpha.1",
 
   "scripts": {
-    "build": "browserify $(jqn package name) -s OP | uglifyjs -cm > $(jqn package name).min.js",
-    "update": "git tag v$(jqn bower version) &&  git push --tags",
+    "cover": "istanbul cover -- minijasminenode2 test/spec.js --verbose",
 
-    "test": "istanbul cover -- minijasminenode2 test/spec.js --verbose",
-    "posttest": "zuul test/spec.js --report"
+    "Travis-CI commands":"",
+      "test": "$(jqn package scripts.cover)",
+      "posttest": "zuul test/spec.js --report",
+
+    "Bower build":"",
+      "build": "browserify $(jqn package name) -s OP | uglifyjs -cm > $(jqn package name).min.js",
+      "postbuild": "wc -c $(jqn bower main)",
+
+    "Bower update":"",
+      "update": "git tag v$(jqn bower version) &&  git push --tags"
   },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run build && npm run cover"
+    }
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ],
 
   "dependencies": {
     "json5": "^0.4.0",
-    "json_ml": "0.0.1-alpha.2",
+    "json_ml": "0.0.1-alpha.4",
     "yamljs": "^0.2.2"
   },
   "devDependencies": {
     "brfs": "^1.4.0",
     "browserify": "^10.2.0",
+    "ghooks": "^0.3.2",
     "istanbul": "^0.3.14",
     "jasmine": "^2.3.1",
     "jqn": "0.0.3",
@@ -30,7 +47,8 @@
 
   "keywords": [
     "json5",
-    "yaml"
+    "yaml",
+    "jsonml"
   ],
   "repository": {
     "type": "git",

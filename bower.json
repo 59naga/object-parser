@@ -1,8 +1,8 @@
 {
   "name": "object-parser",
   "main": "object-parser.min.js",
-  "description": "Multiple parse/stringify libraries",
-  "version": "0.0.1-alpha.0",
+  "description": "Multiple parse/stringify function",
+  "version": "0.0.1-alpha.1",
   
   "homepage": "https://github.com/59naga/object-parser",
   "authors": [
