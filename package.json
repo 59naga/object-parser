@@ -1,7 +1,7 @@
 {
   "name": "object-parser",
   "main": "object-parser.js",
-  "version": "0.0.1-alpha.2",
+  "version": "0.0.1-alpha.3",
   "description": "Multiple parse/stringify function",
 
   "scripts": {
@@ -24,8 +24,7 @@
     }
   },
   "files": [
-    "index.js",
-    "object-parser",
+    "object-parser.js",
     "lib"
   ],
 
