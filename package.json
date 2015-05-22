@@ -1,8 +1,8 @@
 {
   "name": "object-parser",
-  "main": "object-parser",
+  "main": "object-parser.js",
+  "version": "0.0.1-alpha.2",
   "description": "Multiple parse/stringify function",
-  "version": "0.0.1-alpha.1",
 
   "scripts": {
     "cover": "istanbul cover -- minijasminenode2 test/spec.js --verbose",
@@ -25,6 +25,7 @@
   },
   "files": [
     "index.js",
+    "object-parser",
     "lib"
   ],
 
